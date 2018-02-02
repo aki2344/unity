@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour {
             pos = Camera.main.ScreenToWorldPoint(pos);
             //パーティクルの生成
             if (HitParticle != null)
-                Destroy(Instantiate(HitParticle, pos, transform.rotation) as GameObject, 3);
+                Destroy(Instantiate(HitParticle, pos, transform.rotation), 3);
 
             //iTweenがすでに動いていたら、削除する
             gameObject.DestroyITween();
